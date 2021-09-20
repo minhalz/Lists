@@ -27,17 +27,18 @@ function Input({ name, value, placeholder, completed, larger, mb }) {
   return (
     <input
       ref={ref}
-      onChange={updateField}
+      onInput={updateField}
       className={`block py-3 px-3 lg:px-5 w-full ${
         larger ? "text-xl lg:text-2xl" : "lg:text-lg"
-      } leading-tight text-white align-middle bg-primary-very-dark-desaturated-blue focus-visible:outline-none caret-primary ${
+      } leading-tight text-white align-middle bg-primary-very-dark-desaturated-blue focus-visible:outline-none caret-primary${
         completed
-          ? "line-through text-primary-very-dark-gray-blue placeholder-primary-very-dark-gray-blue"
+          ? " line-through text-primary-very-dark-gray-blue placeholder-primary-very-dark-gray-blue"
           : ""
       }`}
       value={value}
       placeholder={placeholder}
       disabled={completed}
+      spellCheck="true"
     />
   );
 }
