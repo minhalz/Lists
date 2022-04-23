@@ -1,7 +1,10 @@
 import Header from "./Header";
 import Link from "next/link";
+import { useSession } from "next-auth/client";
 
 function SiteLayout({ children }) {
+  const [session, loading] = useSession();
+
   return (
     <div>
       <Header />
@@ -12,6 +15,11 @@ function SiteLayout({ children }) {
         <Link href="/privacy-policy">
           <a className="text-white hover:underline">Privacy Policy</a>
         </Link>
+        {session && (
+          <Link href="/delete-data">
+            <a className="ml-3 text-white hover:underline">Delete Your Data</a>
+          </Link>
+        )}
       </div>
     </div>
   );
