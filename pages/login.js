@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/client";
 import { useEffect } from "react";
-import FacebookButton from "../src/components/Buttons/Facebook";
+import GoogleButton from "../src/components/Buttons/Google";
 import { NextSeo } from "next-seo";
 
 export default function Login() {
@@ -23,7 +23,7 @@ export default function Login() {
   return (
     <>
       <NextSeo title="Login" />
-      <FacebookButton />
+      <GoogleButton />
     </>
   );
 }
