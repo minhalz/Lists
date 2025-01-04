@@ -4,6 +4,7 @@
   "rules": {
     "tailwindcss/no-custom-classname": 0,
     "prefer-const": "error",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/no-unescaped-entities": 0
   }
 }
